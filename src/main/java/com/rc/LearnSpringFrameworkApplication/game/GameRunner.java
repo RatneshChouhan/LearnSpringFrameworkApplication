@@ -2,16 +2,24 @@ package com.rc.LearnSpringFrameworkApplication.game;
 
 public class GameRunner {
 
-    private final MarioGame game;
-//  private final ContraGame game;
+// GameRunner class is tightly coupled with MarioGame/ContraGame classes
 
-    public GameRunner(MarioGame game) {
+/*  private final ContraGame game;
+    public GameRunner(ContraGame game) {
+        this.game = game;
+    }
+        private final MarioGame game;
+*/
+
+//  Level-1: Loose Coupling -> Use of interface instead of class objects
+
+    private GamingConsole game;
+
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
-    /*public GameRunner(ContraGame game) {
-        this.game = game;
-    }*/
+
 
     public void runGame() {
         this.game.up();
