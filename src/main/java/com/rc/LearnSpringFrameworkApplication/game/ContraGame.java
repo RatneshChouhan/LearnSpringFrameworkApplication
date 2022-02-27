@@ -1,5 +1,6 @@
 package com.rc.LearnSpringFrameworkApplication.game;
 
+//@Component
 public class ContraGame implements GamingConsole {
 
     @Override
